@@ -61,4 +61,14 @@ public class Person { // this person // POJO // Domain Object
 	public String getName(){
 		return name;
 	}
+	
+	public void showDetails() {
+		System.out.println("Name :" +name +" Age :" + age );
+		System.out.println(getName());
+		System.out.println("Hello I am here now.");
+	}
+	
+	protected void finalize() throws Throwable {
+		System.out.println("Reclaimed "+ name);
+	}
 }

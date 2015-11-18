@@ -21,6 +21,7 @@ public class CompanyClient {
 		/*Calculator calc = new Calculator(4,5);
 		System.out.println(calc.add());
 		System.out.println(calc.finalResult());*/
-		
+		Overloading ol = new Overloading();
+		ol.calc(3, 3);
 	}
 }
