@@ -1,10 +1,13 @@
 package com.jrout.tutorial.object;
 
+import com.jrout.tutorial.staticexample.Pen;
+
 public class Person { // this person // POJO // Domain Object
 	private int age;
 	private String name;
 	private int height;
 	private String address;
+	private Pen pen;
 	
 	/*public Person() {
 		age = 1;

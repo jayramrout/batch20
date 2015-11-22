@@ -11,7 +11,12 @@ public class Pen {
 		this.name = name;
 	}
 	
-	static{
-		System.out.println("I am in static Block...");
+	public static Pen p = new Pen("");
+	
+	public static Pen getInstance(){
+		if(p == null) {
+			p = new Pen("");
+		}
+		return p;
 	}
 }
