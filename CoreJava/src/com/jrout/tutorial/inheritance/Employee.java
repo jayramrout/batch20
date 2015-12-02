@@ -5,8 +5,10 @@ public class Employee {
 	private String name;
 	private String empDept;
 	
+	static int empCount = 0;
+	
 	public Employee(){
-		
+		empCount++;
 	}
 	
 	public Employee(int empId, String name, String empDept) {
