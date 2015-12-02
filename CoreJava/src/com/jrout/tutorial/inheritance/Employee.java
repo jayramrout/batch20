@@ -44,4 +44,5 @@ public class Employee {
 		System.out.println(getEmpDept());
 		System.out.println(getEmpId());
 	}
+	
 }

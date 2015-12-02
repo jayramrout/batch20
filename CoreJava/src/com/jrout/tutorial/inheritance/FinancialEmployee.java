@@ -18,4 +18,5 @@ public class FinancialEmployee extends Employee { // is a relationship
 	public void setFinancicalExp(int financicalExp) {
 		this.financicalExp = financicalExp;
 	}
+	
 }

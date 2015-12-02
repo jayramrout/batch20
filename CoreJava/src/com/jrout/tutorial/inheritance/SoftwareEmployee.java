@@ -1,6 +1,8 @@
 package com.jrout.tutorial.inheritance;
 
-public class SoftwareEmployee extends Employee {
+import com.jrout.tutorial.inheritance.abstractionexample.Running;
+
+public class SoftwareEmployee extends Employee implements Running{
 	
 	public SoftwareEmployee(int empId, String name, String empDept) {
 		super(empId, name, empDept);
@@ -17,11 +19,21 @@ public class SoftwareEmployee extends Employee {
 	}
 	
 	public void printMyDetails(){
-		super.getEmpDept();
+		System.out.println(getEmpId() +" " +getEmpDept() +" " + getName());
 	}
 	
 	@Override
 	public String getTieColor() {
 		return super.getEmpDept()+ " Employee has White color Tie";
+	}
+	
+	@Override
+	public String toString() {
+		return getEmpId() +" " +getEmpDept() +" " + getName();
+	}
+
+	@Override
+	public void runningSpeed() {
+		System.out.println("My running speed is very very good...bad..");
 	}
 }
