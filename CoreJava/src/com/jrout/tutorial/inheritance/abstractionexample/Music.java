@@ -4,6 +4,7 @@ public abstract class Music {
 	private String type; // Classical or rock or pop
 	private String singer;
 	private String musicalIntrument;
+	private Dimension dimension;
 	
 	public String getMusicalIntrument() {
 		return musicalIntrument;
