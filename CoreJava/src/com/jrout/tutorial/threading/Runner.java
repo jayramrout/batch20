@@ -18,3 +18,7 @@ public class Runner extends Sports implements Runnable { //extends Thread {
 		
 	}
 }
+
+class Testing {
+	int i = 90;
+}

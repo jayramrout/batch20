@@ -8,5 +8,8 @@ public class Client {
 		
 		House h = new House(br, new Kitchen());
 		h.printDetails();
+		
+//		Testing test = new Testing();
+		
 	}
 }
