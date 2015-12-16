@@ -10,7 +10,6 @@ public class AcountClient {
 		Thread child1 = new Thread(account , "Husband");
 		Thread child2 = new Thread(account , "Husband");
 
-		
 		husband.start();
 		wife.start();
 		

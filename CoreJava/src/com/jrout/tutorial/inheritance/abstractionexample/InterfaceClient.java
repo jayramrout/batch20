@@ -19,7 +19,7 @@ public class InterfaceClient {
 		runningSpeed(vc11);
 	}
 	
-	public static void runningSpeed(Running run){
-		run.runningSpeed();
+	public static void runningSpeed(Running running){
+		running.runningSpeed();
 	}
 }

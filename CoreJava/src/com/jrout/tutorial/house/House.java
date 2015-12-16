@@ -1,7 +1,7 @@
 package com.jrout.tutorial.house;
 
 public class House {
-	Bathroom br;
+	Bathroom br ;
 	Kitchen k;
 	
 	public House(Bathroom br , Kitchen k) {
