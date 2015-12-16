@@ -2,6 +2,7 @@ package com.jrout.tutorial.io;
 
 import java.io.BufferedReader;
 import java.io.BufferedWriter;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
@@ -28,7 +29,7 @@ public class BufferedReaderExample {
 			}
 			bw.flush();
 			System.out.println("Data written successfully...");
-		}catch(Exception exp){
+		}catch(IOException | NullPointerException exp){
 			exp.printStackTrace();
 		}finally{
 			try{
