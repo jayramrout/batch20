@@ -1,4 +1,4 @@
-package rmi;
+package com.jrout.tutorial.rmi;
 
 import java.net.MalformedURLException;
 import java.rmi.Naming;
