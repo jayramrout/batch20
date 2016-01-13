@@ -53,6 +53,7 @@ public class GetEmployeeController extends HttpServlet {
 		RequestDispatcher body = request.getRequestDispatcher("EmployeeViewServlet");
 		body.forward(request, response);
 		
+		//response.sendRedirect("EmployeeViewServlet?fn="+employee.getFirstName());
 	}
 
 }
