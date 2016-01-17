@@ -8,6 +8,7 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 
 import jrout.tutorial.domain.Employee;
 
@@ -38,11 +39,14 @@ public class EmployeeViewServlet extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+		
+//		response.setContentType("application/pdf");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
-/*		String fn = request.getParameter("fn");
+		/*String fn = request.getParameter("fn");
 		String ln = request.getParameter("ln");
-		String email = request.getParameter("email");
-*/		
+		String email = request.getParameter("email");*/
+		
 		Employee emp = (Employee)request.getAttribute("employee");
 		
 		out.print("<html><body>");
@@ -50,7 +54,10 @@ public class EmployeeViewServlet extends HttpServlet {
 		out.println("Details : Employee FN : "+ emp.getFirstName() +" <br>");
 		out.println("Employee LN : "+ emp.getLastName() +" <br>");
 		out.println("Employee Email : "+ emp.getEmail() +" <br>");
+		out.println("Please return to the <a href=\"" + 
+				response.encodeURL("http://localhost:8081/employeeweb") + 
+				"\">Home Page</a>.");
+		
 		out.print("</body></html>");
 	}
-
 }

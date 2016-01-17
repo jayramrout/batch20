@@ -50,10 +50,11 @@ public class GetEmployeeController extends HttpServlet {
 		RequestDispatcher body = request.getRequestDispatcher("EmployeeViewServlet"+queryString);
 		body.include(request, response);
 */
-		RequestDispatcher body = request.getRequestDispatcher("EmployeeViewServlet");
+//		RequestDispatcher body = request.getRequestDispatcher("EmployeeViewServlet");
+		RequestDispatcher body = request.getRequestDispatcher("employeeViewJSP.jsp");
 		body.forward(request, response);
 		
-		//response.sendRedirect("EmployeeViewServlet?fn="+employee.getFirstName());
+//		response.sendRedirect("EmployeeViewServlet?fn="+employee.getFirstName());
 	}
 
 }
