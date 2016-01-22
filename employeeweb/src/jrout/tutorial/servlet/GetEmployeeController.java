@@ -1,6 +1,7 @@
 package jrout.tutorial.servlet;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -20,7 +21,7 @@ import jrout.tutorial.domain.Employee;
 @WebServlet("/GetEmployeeController")
 public class GetEmployeeController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
-   
+	private String dbName;
     /**
      * @see HttpServlet#HttpServlet()
      */
@@ -46,7 +47,10 @@ public class GetEmployeeController extends HttpServlet {
 		EmployeeDAO	employeeDao = new EmployeeDAOImpl();
 		Employee employee = employeeDao.getEmployee(empId);
 		
+		List<Employee> employees = employeeDao.getEmployeeUsingDeptId("");
+		
 		request.setAttribute("employee", employee);
+		request.setAttribute("employees", employees);
 /*		String queryString = "?fn="+employee.getFirstName()+"&ln="+employee.getLastName()+"&email="+employee.getEmail();
 		
 		RequestDispatcher body = request.getRequestDispatcher("EmployeeViewServlet"+queryString);
@@ -58,5 +62,8 @@ public class GetEmployeeController extends HttpServlet {
 		
 //		response.sendRedirect("EmployeeViewServlet?fn="+employee.getFirstName());
 	}
-
+	
+	private void callMe(){
+		
+	}
 }

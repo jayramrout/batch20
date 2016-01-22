@@ -5,6 +5,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
+import java.util.List;
 
 import jrout.tutorial.domain.Employee;
 
@@ -48,5 +49,9 @@ public class EmployeeDAOImpl implements EmployeeDAO {
 			}
 		}
 		return emp;
+	}
+	@Override
+	public List<Employee> getEmployeeUsingDeptId(String deptId) {
+		return null;
 	}
 }

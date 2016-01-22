@@ -6,7 +6,14 @@ public class Employee implements Serializable {
 	private String firstName;
 	private String lastName;
 	private String email;
+	private Address address;
 	
+	public Address getAddress() {
+		return address;
+	}
+	public void setAddress(Address address) {
+		this.address = address;
+	}
 	public String getFirstName() {
 		return firstName;
 	}
