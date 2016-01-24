@@ -1,4 +1,5 @@
 <%@ page import="java.io.*,java.util.*" session="true"%>
+<!-- Asynchoronous Javascript and XML -->
 <%
    // Get session creation time.
    Date createTime = new Date(session.getCreationTime());
@@ -14,8 +15,8 @@
    // Check if this is new comer on your web page.
    if (session.isNew()){
       title = "Welcome to my website";
-      session.setAttribute(userIDKey, userID);
-      session.setAttribute(visitCountKey,  visitCount);
+      session.setAttribute("userID", "Jayram");
+      session.setAttribute("visitCount",  new Integer(0));
    }
    
    visitCount = (Integer)session.getAttribute(visitCountKey);
@@ -23,7 +24,7 @@
 	   visitCount = visitCount + 1;
 	   userID = (String)session.getAttribute(userIDKey);
    }
-   session.setAttribute(visitCountKey,  visitCount);
+   session.setAttribute("visitCount",  visitCount);
    
 %>
 <html>
@@ -81,7 +82,7 @@
 </table>
 <div id="myDiv">
 		<h2>Let AJAX change this text</h2>
-	</div>
+</div>
 	<button type="button" onclick="loadXMLDoc()">Change Content</button>
 
 </body>

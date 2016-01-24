@@ -6,7 +6,12 @@
 <body>
 
 <c:catch var ="catchException">
-   <% int x = 5/1;%>
+   <%
+   	String value = request.getParameter("value");
+   	
+   int x = 100/Integer.parseInt(value);
+   out.println(x);
+   %>
 </c:catch>
 
 <c:if test = "${catchException != null}">

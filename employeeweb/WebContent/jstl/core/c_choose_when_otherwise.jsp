@@ -4,6 +4,10 @@
 <title> Tag Example</title>
 </head>
 <body>
+<%-- <%
+	session.setAttribute("salary", "Value");
+%> --%>
+
 <c:set var="salary" scope="session" value="${2000*2}"/>
 <p>Your salary is : <c:out value="${salary}"/></p>
 

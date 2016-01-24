@@ -1,12 +1,12 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
-
 <html>
 <head>
   <title>JSTL fmt:dateNumber Tag</title>
 </head>
 <body>
-<h3>Number Format:</h3>
+<h3>Date Format:</h3>
+
 <c:set var="now" value="<%=new java.util.Date()%>" />
 
 <p>Formatted Date (1): <fmt:formatDate type="time" 
